@@ -1,107 +1,48 @@
-@font-face {
-    font-family: jmh;
-    src: url(../JMH\ Typewriter.ttf);
-}
-
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: none;
+    box-sizing: border-box;
 }
 
+/* Body */
 body {
     background: #fcfcfc;
-}
-
-section {
-    height: 800px;
-}
-
-nav { 
-    height: 75px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: rgba(252, 252, 252, 0);
-    padding: 30px;
-}
-
-nav .navImg {
-    width: 50px;
-    transform: translate(-10px, -10px);
-    transition: 0.2s;
-}
-
-nav .navImg:hover {
-    transition: 0.2s;
-    width: 75px;
-    transform: translate(-10px, -10px);
-}
-
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-}
-
-nav ul li {
-    padding: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    transform: scale(1.5);
-}
-
-nav > ul > li a img {
-    width: 30px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    border: black solid;
-    transition: 0.2s;
-}
-
-nav > ul > li a img:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-    transition: 0.2s;
 }
 
 /* Hero Section */
 .hero {
     margin-top: -135px;
-    background: url(../IMAGES/Background.jpg);
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-.hero .container {
+    background: url(../IMAGES/Background.jpg) no-repeat center center; /* Ensure the image covers the entire area */
+    background-size: cover; /* Make sure it covers the area properly */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a transparent dark overlay */
+    height: 100vh; /* Ensure the hero section takes full height of the viewport */
     display: flex;
-    flex-direction: column;
-    padding: 300px;
     justify-content: center;
     align-items: center;
 }
 
+.hero .container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
 .hero .container h1 {
     font-family: jmh;
-    font-size: 40px;
+    font-size: 3em; /* Make the title bigger */
+    margin-bottom: 20px;
 }
 
 .hero .container ul {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     padding: 20px;
     list-style-type: none;
 }
 
 .hero .container ul li {
-    margin: 20px;
+    margin: 10px;
 }
 
 .hero .container ul li a {
@@ -119,11 +60,25 @@ nav > ul > li a img:hover {
 
 .hero .container ul li a:hover {
     transition: 0.2s;
-    background: rgba(0, 0, 0, 0.25)
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero .container h1 {
+        font-size: 2em; /* Adjust the font size for mobile */
+    }
+
+    .hero .container ul {
+        flex-direction: column;
+    }
+
+    .hero .container ul li {
+        margin: 10px 0;
+    }
 }
 
 /* About Section */
-
 .about {
     background: rgb(235, 235, 235);
     padding: 20px;
@@ -134,7 +89,7 @@ nav > ul > li a img:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; /* Default to row layout */
     text-align: center;
 }
 
@@ -146,6 +101,8 @@ nav > ul > li a img:hover {
 
 .about .container h1 {
     font-family: jmh;
+    font-size: 2.5em; /* Increase font size for the title */
+    margin-bottom: 20px;
 }
 
 .about .container p {
@@ -153,12 +110,41 @@ nav > ul > li a img:hover {
     font-weight: bold;
     letter-spacing: 1px;
     padding: 10px;
+    font-size: 1.2em; /* Adjust the font size */
+    line-height: 1.5; /* Improve readability */
 }
 
 .about .container .right img {
     height: 350px;
     padding: 20px;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .about .container {
+        flex-direction: column; /* Change to column layout on mobile */
+        padding: 50px;
+    }
+
+    .about .container .left {
+        width: 100%; /* Make the left section take full width on mobile */
+        margin-right: 0;
+    }
+
+    .about .container h1 {
+        font-size: 2em; /* Adjust the font size for mobile */
+    }
+
+    .about .container p {
+        font-size: 1.1em; /* Adjust the font size for better readability on mobile */
+    }
+
+    .about .container .right img {
+        height: 250px; /* Reduce image size on mobile */
+        margin-top: 20px; /* Add spacing between text and image */
+    }
+}
+
 
 /* News */
 

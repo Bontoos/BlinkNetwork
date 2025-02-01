@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
-        <a href="#"><img class="navImg" src="../IMAGES/BlinkStudioLogo.png" alt=""></a>
+        <a href="#" class="logo"><img class="navImg" src="../IMAGES/BlinkStudioLogo.png" alt="Logo"></a>
         <ul>
-            <li><a href="#"><img src="../IMAGES/discord.png" alt=""></a></li>
-            <li><a href="#"><img src="../IMAGES/tik-tok.png" alt=""></a></li>
-            <li><a href="#"><img src="../IMAGES/instagram.png" alt=""></a></li>
-            <li><a href="#"><img src="../IMAGES/youtube.png" alt=""></a></li>
-            <li><a href="#"><img src="../IMAGES/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="../IMAGES/discord.png" alt="Discord"></a></li>
+            <li><a href="#"><img src="../IMAGES/tik-tok.png" alt="TikTok"></a></li>
+            <li><a href="#"><img src="../IMAGES/instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="../IMAGES/youtube.png" alt="YouTube"></a></li>
+            <li><a href="#"><img src="../IMAGES/twitter.png" alt="Twitter"></a></li>
         </ul>
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Blink Network</h1>
@@ -27,6 +37,8 @@
             </ul>
         </div>
     </section>
+
+    <!-- About Section -->
     <section class="about" id="aboutPage">
         <div class="container">
             <div class="left">
@@ -34,10 +46,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti corrupti eligendi necessitatibus aliquam porro repellat. Reiciendis voluptatum vero odit distinctio architecto necessitatibus. Reprehenderit praesentium officia, nisi exercitationem deserunt voluptatibus dolore optio, itaque minus excepturi pariatur blanditiis quas magni esse? Commodi nihil tempora quaerat? Delectus, possimus.</p>
             </div>
             <div class="right">
-                <img src="../IMAGES/aboutus.jpg" alt="">
+                <img src="../IMAGES/aboutus.jpg" alt="About Us Image">
             </div>
         </div>
     </section>
+
+    <!-- News Section -->
     <section class="news" id="newsPage">
         <div class="container">
             <div class="item">
@@ -59,6 +73,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Navigation Arrows for News -->
         <button class="arrow-left">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
                 <path d="M15.5 3.5L14 2l-8 8 8 8 1.5-1.5L8.5 10z"/>
@@ -69,10 +85,23 @@
                 <path d="M8.5 20.5L10 22l8-8-8-8-1.5 1.5L15.5 12z"/>
             </svg>
         </button>
-        
+
+        <!-- Dots Navigation for News -->
         <div class="dots"></div>
-      </section>
+    </section>
+
     <script src="../JS/smoothScroll.js" defer></script>
     <script src="../JS/newsPage.js" defer></script>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
