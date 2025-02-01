@@ -280,3 +280,90 @@ nav > ul > li a img:hover {
 .dot.active {
     background-color: #919191;
 }
+
+
+
+/* Phone Support */
+
+/* Additional mobile adjustments */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 15px;
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav .navImg {
+        width: 40px; /* Reduce image size on mobile */
+    }
+
+    /* Hero Section */
+    .hero .container {
+        padding: 100px; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .hero .container h1 {
+        font-size: 30px; /* Decrease font size */
+    }
+
+    .hero .container ul {
+        padding: 10px;
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .hero .container ul li {
+        margin: 10px;
+    }
+
+    /* About Section */
+    .about .container {
+        padding: 40px;
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center; /* Center content */
+    }
+
+    .about .container .left {
+        margin-right: 0;
+        width: 100%; /* Make left section full width */
+    }
+
+    .about .container .right img {
+        height: auto; /* Adjust image size */
+        max-width: 100%;
+    }
+
+    /* News Section */
+    .news .container {
+        flex-direction: column; /* Stack news items vertically */
+    }
+
+    .news .item {
+        flex: 0 0 100%; /* Ensure each item takes full width */
+    }
+
+    /* Arrows */
+    .arrow-left, .arrow-right {
+        width: 50px; /* Smaller arrows */
+        height: 50px;
+    }
+
+    /* Dots */
+    .dots {
+        bottom: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
