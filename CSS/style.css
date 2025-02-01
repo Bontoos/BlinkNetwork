@@ -272,21 +272,147 @@ body {
 /* Phone Support */
 
 /* Additional mobile adjustments */
-@media (max-width: 1080px) {
-    /* Navigation */
-    nav {
-        padding: 15px;
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fcfcfc;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    height: 75px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Logo Styling */
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .navImg {
+    width: 50px;
+    transition: 0.2s;
+}
+
+nav .navImg:hover {
+    width: 75px;
+}
+
+/* Nav Items (Desktop) */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease;
+}
+
+/* Hover effects */
+nav ul li a:hover img {
+    transform: scale(1.2);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+nav ul li {
+    padding: 15px 0;
+}
+
+nav ul li a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hamburger to Cross Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
     }
 
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .navImg {
+        width: 40px;
     }
 
     nav ul li {
         padding: 10px;
     }
+
 
     nav .navImg {
         width: 40px; /* Reduce image size on mobile */
