@@ -286,7 +286,7 @@ nav > ul > li a img:hover {
 /* Phone Support */
 
 /* Additional mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     /* Navigation */
     nav {
         padding: 15px;
